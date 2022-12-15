@@ -1,0 +1,64 @@
+<html>
+	<body>
+		<div>
+			<label>Enter the Value of m:</label>
+			<input type="text" id="m" >
+		</div>
+		<br>
+		<div>
+			<label>Enter the Value of n:</label>
+			<input type="text" id="n" >
+		</div>
+		<br>
+		<div>
+			<button type="button" onclick="getfactorial();">m!</button>
+                        <button type="button" onclick="getpermutation();">mPn</button>
+                        <button type="button" onclick="getfactorial();">mCn</button>
+
+		</div>
+	</body>
+	<script>
+		function getfactorial()
+		{
+			var x = document.getElementById("m").value.trim();
+			var xfactorial = factorial(x);
+			document.write(x+" factorial ="+xfactorial);
+		}
+        function getpermutation()
+		{
+			var x = document.getElementById("m").value.trim();
+			var y = document.getElementById("n").value.trim();
+			var xfactorial = factorial(x);
+            var xpermutation = factorial(x) / factorial(y);
+			document.write(x+" permutation ="+xpermutation);
+		}
+
+		function factorial(x)
+		{
+			var prd=1;
+			j=x;
+			while(j>=1)
+			{
+				prd=prd*j;
+				j=j-1;
+			}
+			return prd;
+		}
+
+function factorial(y)
+		{
+			var prd=1;
+			j=y;
+			while(j>=1)
+			{
+				prd=prd*j;
+				j=j-1;
+			}
+			return prd;
+		}
+
+
+
+	</script>
+</html>
+
