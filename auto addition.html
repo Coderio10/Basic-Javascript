@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add</title>
+</head>
+<body>
+	<form>
+
+
+		<table border="1">
+			<tr>
+				<td>First Number</td>
+				<td> </td>
+				<td><input type="text" id="n1" onkeyup="compute();" style="width:75%; text-align: center;"></td>
+			</tr>
+			<tr>
+				<td>Second Number</td>
+				<td></td>
+				<td><input type="text" id="n2" onkeyup="compute();" style="width:75%; text-align: center;"></td>
+			</tr>
+			<tr>
+				<td>Result</td>
+				<td></td>
+				<td><input type="text" id="n3" style="width:75%; text-align: center;" readonly="true"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><button type="button" onclick="compute();">compute</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script>
+	function compute()
+	{
+		var n1 = document.getElementById("n1").value.trim();
+		var n2 = document.getElementById("n2").value.trim();
+		if (n1=='')
+			n1="0";
+		if (n2=='')
+			n2="0";		
+		var n3 = parseInt(n1)+parseInt(n2);
+		document.getElementById("n3").value=n3;
+	}
+
+</script>
+</html>
