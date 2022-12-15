@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<BODY>
+	<table>
+		<tr>
+			<td>Enter the First Number:</td>
+			<td></td>
+			<td><input type="text" id="n1" onkeyup="computeresult();"></td>
+		</tr>
+		<tr>
+			<td>Enter the Second Number:</td>
+			<td></td>
+			<td><input type="text" id="n2" onkeyup="computeresult();"></td>
+		</tr>
+		<tr>
+			<td>Result:</td>
+			<td></td>
+			<td><input type="text" id="result" readonly="true"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>
+				<button type="button" onclick="computeresult();">Compute</button>
+				<button type="button" onclick="arraytest();">Test Array</button>
+				<button type="button" onclick="myloop();">Test Loop</button>
+			</td>
+		</tr>
+	</table>
+</BODY>
+<script>
+	//window.load = computeresult();
+	function computeresult()
+	{
+		var v1 = document.getElementById("n1").value.trim();
+		var v2 = document.getElementById("n2").value.trim();
+		if (v1==''){
+			v1="0";
+		}
+		if (v2==''){
+			v2="0";
+		}
+		var v3 = parseInt(v1)+parseInt(v2);
+		document.getElementById("result").value=v3;
+	}
+
+	function arraytest()
+	{
+		var x = [-16,8,7,-3,0,10];
+		var result =x[1]+x[3];
+		alert(result);
+	}
+
+	function myloop(){
+		
+		for (k=1;k<=10;k=k+1){
+			
+			document.write("I am a winner <br>");
+		
+		}
+
+	}
+
+</script>
+</HTML>
