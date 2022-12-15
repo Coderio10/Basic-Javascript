@@ -1,0 +1,65 @@
+O<HTML>
+	<BODY>
+		<table>
+			<tr>
+				<td>Enter A Number:</td>
+				<td></td>
+				<td><input type="text" id="num"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>
+					<button type="button" onclick="AddToArray();">Add Number</button>
+					<button type="button" onclick="PrintArrays();">Print Array</button>
+					<button type="button" onclick="arraytest();">Array Test</button>
+					<button type="button" onclick="AssocArrray();">Assoc Array</button>
+				</td>
+			</tr>
+		</table>
+	</BODY>
+	<script>
+		var myarray = [];
+		function AddToArray()
+		{
+			var num = document.getElementById("num").value.trim();
+			if (num==''){
+				alert('Enter a number to added');
+			}else{		
+				var i = myarray.length
+				myarray[i]=num;
+				alert('Added');
+				document.getElementById("num").value="";
+				document.getElementById("num").focus();
+			}
+		}
+
+		function PrintArrays()
+		{
+			var i = myarray.length;
+			for (j=0;j<i; j++){
+				document.write(myarray[j]+"<br>");
+			}		
+		}
+
+		function arraytest()
+		{
+			var d = [10,5,6,11,7,8];
+			var total = d.length;
+			for (t=0;t<total; t++){
+				document.write(d[t]+"<br>");
+			}		
+		}
+
+		function AssocArrray()
+		{
+			var scores = {"Sola":80,"Kunle":68,"Anointed":100,"Fola":48};
+			for (i in scores)
+			{
+				document.write(i + " scored "+scores[i]+"<br>");
+			}
+			//document.write("Sola scored "+scores['Sola']);
+		}
+		
+	</script>
+</HTML>
