@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body> 
+	<form>
+		<div>
+			<label>enter the first number</label>
+			<input type="number" id="h1" style="width:5%; text-align: center;">
+		</div>
+		<div>
+			<label>enter the second  number</label>
+			<input type="number" id="h2" style="width:5%; text-align: center;">
+			
+		</div>
+		<div>
+			<label>result</label>
+			<input type="text" id="h3" style="width:5%; text-align: center;" readonly="true">
+
+			
+		</div>
+		<div>
+			<button type="button" onclick="compute();">compute</button><br>
+			<button type="button" onclick="arraytest();">test array</button><br>
+			<button type="button" onclick="myloop();">loop</button><br>
+		</div>
+	</form>
+
+</body>
+<script>
+
+	function compute() 
+	{
+		var h1 = document.getElementById('h1').value.trim();
+		var h2 = document.getElementById('h2').value.trim();
+		if(h1=="")
+			h1 ="0";
+		if(h2=="")
+			h2 ="0";
+		var h3 = parseInt(h1)+parseInt(h2);
+		document.getElementById('h3').value=h3
+	}
+
+
+	function arraytest()
+	{
+		var x = [-16,8,7,-3,0,10];
+		var result =x[1]+ x[3];
+		alert(result);
+	}
+	
+	function myloop() {
+		for ( i = 1;i<=100;i=i+1) {
+			document.write(i +"<br>");
+		}	
+	}
+	
+</script>
+       
+</html>
